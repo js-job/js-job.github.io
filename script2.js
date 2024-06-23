@@ -1,5 +1,5 @@
 let isFirefox = typeof InstallTrigger !== 'undefined';
-const words = "Bachelor & Master of Science (2024)";
+const words = "Bachelor & Master (2024)";
 
 let ANGLE = 360;
 const ANIMATION_DURATION = 4000;
