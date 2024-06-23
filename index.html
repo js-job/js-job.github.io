@@ -26,13 +26,13 @@
                 <p slot="content">Vrije Universiteit</p>
             </card>
         </a>
-        <a href="work.html">
+        <a href="work.html?mobile">
             <card data-image="https://images.unsplash.com/photo-1479644025832-60dabb8be2a1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
                 <h1 slot="header">Work</h1>
                 <p slot="content">OGD</p>
             </card>
         </a>
-        <a href="skills.html">
+        <a href="skills.html?mobile">
             <card data-image="https://images.unsplash.com/photo-1479621051492-5a6f9bd9e51a?dpr=2&auto=compress,format&fit=crop&w=1199&h=811&q=80&cs=tinysrgb&crop=">
                 <h1 slot="header">Skills</h1>
                 <p slot="content">A lot</p>
@@ -41,41 +41,8 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
+    <!-- Ensure your script.js is correctly linked -->
     <script src="./script.js"></script>
-       <!-- JavaScript to handle link updates based on device type -->
-    <script>
-        // Check if the device is mobile
-        function isMobileDevice() {
-            return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
-        }
-
-        // Function to update links based on device type
-        function updateLinks() {
-            const aboutMeLink = document.getElementById('aboutMeLink');
-            const educationLink = document.getElementById('educationLink');
-            const workLink = document.getElementById('workLink');
-            const skillsLink = document.getElementById('skillsLink');
-
-            if (isMobileDevice()) {
-                aboutMeLink.href = 'about-me.html?desktop';
-                educationLink.href = 'education.html?desktop';
-                workLink.href = 'work.html?mobile';
-                skillsLink.href = 'skills.html?mobile';
-            } else {
-                aboutMeLink.href = 'about-me.html?desktop';
-                educationLink.href = 'education.html?desktop';
-                workLink.href = 'work.html?mobile'; // Always mobile version for desktop
-                skillsLink.href = 'skills.html?mobile'; // Always mobile version for desktop
-            }
-        }
-
-        // Call updateLinks initially to set correct links on page load
-        updateLinks();
-
-        // Optional: Call updateLinks whenever the window is resized (useful for responsive design)
-        window.addEventListener('resize', updateLinks);
-    </script>
-
 </body>
 </html>
 
